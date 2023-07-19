@@ -1,0 +1,14 @@
+diff --git a/node_modules/sneaks-api/models/Sneaker.js b/node_modules/sneaks-api/models/Sneaker.js
+index 9fd7933..8e32414 100644
+--- a/node_modules/sneaks-api/models/Sneaker.js
++++ b/node_modules/sneaks-api/models/Sneaker.js
+@@ -38,6 +38,7 @@ var SneakerSchema = new Schema({
+ 
+ });
+ 
+-var Sneaker = mongoose.model("Sneaker", SneakerSchema);
++// var Sneaker = mongoose.model("Sneaker", SneakerSchema);
++const Sneaker = mongoose.models.Sneaker || mongoose.model("Sneaker", SneakerSchema);
+ 
+ module.exports = Sneaker;
+\ No newline at end of file
