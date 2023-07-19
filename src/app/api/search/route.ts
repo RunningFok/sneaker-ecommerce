@@ -47,6 +47,9 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     console.log(error);
-    NextResponse.json({ error });
+    return NextResponse.json({
+      error: "Error on api/" + error,
+      status: 400,
+    });
   }
 }
