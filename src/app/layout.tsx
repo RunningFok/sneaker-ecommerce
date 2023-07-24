@@ -2,6 +2,8 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { NextAuthProvider } from "./provider";
+import { Providers } from "@/redux/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <NextAuthProvider>
+          <Providers>
+          <Navbar />
+          {children}
+          <Footer />
+          </Providers>
+        </NextAuthProvider>
       </body>
     </html>
   );

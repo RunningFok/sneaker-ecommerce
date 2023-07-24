@@ -1,8 +1,8 @@
 import CarouselSlides from "./components/CarouselSlides";
 import CategoriesBar from "./components/CategoriesBar";
-import Footer from "./components/Footer";
 import PopularBrands from "./components/PopularBrands";
 import RecommendedBar from "./components/RecommendedBar";
+
 
 export default function Home() {
   return (

@@ -9,7 +9,6 @@ export default function CategoriesBar() {
       <div className=" my-2 mx-4 text-lg font-semibold">Handbags</div>
       <div className=" my-2 mx-4 text-lg font-semibold">Watches</div>
       <div className=" my-2 mx-4 text-lg font-semibold">Accessories</div>
-     
     </div>
   );
 }
