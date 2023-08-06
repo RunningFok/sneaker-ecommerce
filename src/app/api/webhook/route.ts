@@ -3,7 +3,6 @@ import Stripe from "stripe";
 import { NextApiRequest, NextApiResponse } from "next";
 import { NextRequest, NextResponse } from "next/server";
 import { buffer } from "micro";
-const permission = require("../../../../permission.json");
 
 interface serviceAccount {
   type?: string;
