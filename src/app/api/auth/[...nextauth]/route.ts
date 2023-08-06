@@ -1,34 +1,50 @@
-// import { authOptions } from "@/app/lib/auth";
-// import { getServerSession } from "next-auth";
-// import { NextResponse } from "next/server";
-
-// export async function GET(request: Request) {
-//   const session = await getServerSession(authOptions);
-
-//   if (!session) {
-//     NextResponse.json({ message: "You must be logged in." });
-//     return;
-//   }
-
-//   return NextResponse.json({
-//     authenticated: !!session,
-//     session,
-//   });
-// }
-
 import NextAuth from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 
-const handler = NextAuth({
+export const authOptions = {
   // Configure one or more authentication providers
+
   providers: [
+    CredentialsProvider({
+      name: "Credentials",
+      credentials: {
+        email: {
+          label: "Email:",
+          type: "text",
+          placeholder: "test@test.com",
+        },
+        password: {
+          label: "Password:",
+          type: "text",
+          placeholder: "123456",
+        },
+      },
+      async authorize(credentials) {
+        const user = {
+          id: "test",
+          name: "Ken",
+          email: "test@test.com",
+          password: "123456",
+        };
+        if (
+          credentials?.email === user.email &&
+          credentials?.password === user.password
+        ) {
+          return user;
+        } else {
+          return null;
+        }
+      },
+    }),
     GoogleProvider({
       clientId: process.env.GOOGLE_ID as string,
       clientSecret: process.env.GOOGLE_SECRET as string,
     }),
-    // ...add more providers here
   ],
-  secret: process.env.NEXT_PUBLIC_SECRET
-});
+  secret: process.env.NEXT_PUBLIC_SECRET,
+};
+
+const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };

@@ -26,8 +26,9 @@ export default function Navbar() {
       <div className="text-lg mx-2">Browse</div>
       <div className="text-lg mx-2">Sell</div>
       <div className="text-lg mx-2">News</div>
-      <div className="text-lg mx-2">About</div>
-      {/* <BellIcon className="h-12 p-3 -mx-1" /> */}
+      <Link href={"/orders"} className="text-lg mx-2">
+        Orders
+      </Link>
 
       <div
         onClick={() => router.push("/checkout")}

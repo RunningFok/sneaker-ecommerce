@@ -11,9 +11,17 @@ declare global {
     description: string;
     thumbnail: string;
   }
+
+  interface IOrder {
+    id: string;
+    shoeName: string;
+    images: string[];
+    amount: number;
+    timestamp: number
+  }
 }
 
-SneakerSchema = SneaksAPI
+SneakerSchema = SneaksAPI;
 
 export const ISneaker =
   mongoose.models.ISneaker || mongoose.model("Sneaker", SneakerSchema);

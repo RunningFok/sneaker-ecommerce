@@ -1,7 +1,7 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApps } from "firebase-admin/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCVoDxBnqhLn9rwXvITI1y50bV3NvVX9A8",
+  apiKey: process.env.apiKey,
   authDomain: "clone-fa5f6.firebaseapp.com",
   projectId: "clone-fa5f6",
   storageBucket: "clone-fa5f6.appspot.com",

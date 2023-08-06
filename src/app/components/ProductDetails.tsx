@@ -35,7 +35,7 @@ export default function ProductDetails({
       thumbnail,
       retailPrice,
       brand,
-      description,
+      // description,
       releaseDate,
       colorway,
     };

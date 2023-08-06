@@ -10,7 +10,7 @@ interface BrandBox {
 export default function BrandBox({ image, brandName, linkURL }: BrandBox) {
   return (
     <div className="text-green-950 w-72 p-1">
-      <Link href={`/${linkURL}`}>
+      <Link href={linkURL}>
         <Image
           src={`/static/images/${image}`}
           alt={brandName}

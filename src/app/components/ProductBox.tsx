@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 interface ProductBoxProps {
-  styleID: number | string;
+  styleID: string;
   shoeName: string;
   thumbnail: string;
   retailPrice: number;

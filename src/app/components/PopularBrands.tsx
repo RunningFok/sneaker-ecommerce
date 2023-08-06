@@ -10,23 +10,23 @@ export default function PopularBrands() {
         <BrandBox
           brandName="Jordan"
           image="jordan-logo.png"
-          linkURL="/jordan"
+          linkURL="/search?q=jordan"
         />
         <BrandBox
           brandName="Nike"
           image="nike-logo-black.png"
-          linkURL="/nike"
+          linkURL="/search?q=nike"
         />
         <BrandBox
           brandName="Adidas"
           image="adidas-logo-2.png"
-          linkURL="/adidas"
+          linkURL="/search?q=adidas"
         />
         <BrandBox brandName="Crocs" image="crocs-logo.png" linkURL="/crocs" />
         <BrandBox
           brandName="New Balance"
           image="newbalance-logo.png"
-          linkURL="/newbalance"
+          linkURL="/search?q=new%20balance"
         />
       </div>
     </div>

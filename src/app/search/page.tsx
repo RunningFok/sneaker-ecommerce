@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import ProductBox from "../components/ProductBox";
 import Loading from "../components/Loading";
@@ -15,7 +15,6 @@ export default function SearchPage() {
     const response = await fetch(`/api/search?q=${searchQuery}`, {
       next: { revalidate: 10 },
     });
-
     return response.json();
   }
 
@@ -85,5 +84,3 @@ export default function SearchPage() {
     </div>
   );
 }
-
-

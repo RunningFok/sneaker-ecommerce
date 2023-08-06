@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { NextAuthProvider } from "./provider";
 import { Providers } from "@/redux/provider";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -23,9 +24,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <NextAuthProvider>
           <Providers>
-          <Navbar />
-          {children}
-          <Footer />
+            <Navbar />
+            {children}
+            <Footer />
           </Providers>
         </NextAuthProvider>
       </body>

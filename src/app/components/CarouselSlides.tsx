@@ -1,12 +1,27 @@
 "use client";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function CarouselSlides() {
+  const router = useRouter();
   const responsive = [
-    "https://links.papareact.com/gi1",
-    "https://links.papareact.com/6ff",
-    "https://links.papareact.com/7ma",
+    {
+      image: "/static/images/nike-banner.webp",
+      size: "h-96 object-none",
+      link: "/DD1391-401",
+    },
+    {
+      image: "/static/images/crocs-banner.jpg",
+      size: "h-96 object-fill",
+      link: "/search?q=crocs",
+    },
+    {
+      image: "/static/images/hoka-banner.webp",
+      size: "h-96 object-fill",
+      link: "/search?q=hoka",
+    },
   ];
   return (
     <div className=" items-center px-5 py-8">
@@ -21,13 +36,22 @@ export default function CarouselSlides() {
         useKeyboardArrows={false}
       >
         {responsive.map((item) => (
-          <div className="justify-items-center place-content-center">
-            <img
-              loading="lazy"
-              src={"https://links.papareact.com/gi1"}
-              alt=""
-              className="h-96"
-            />
+          <div
+            className="justify-items-center place-content-center"
+            key={item.link}
+          >
+            <button
+              type="button"
+              onClick={() => router.push(item.link)}
+              className="w-full"
+            >
+              <img
+                loading="lazy"
+                src={item.image}
+                alt={item.image}
+                className={item.size}
+              />
+            </button>
           </div>
         ))}
       </Carousel>
