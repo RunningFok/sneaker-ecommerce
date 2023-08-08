@@ -24,10 +24,8 @@ export default function Orders() {
   useEffect(() => {
     setLoading(true);
     fetchOrderList();
-    setLoading(false);
   }, [session]);
 
-  console.log(session);
 
   const loader = (
     <div className="sm:max-w-fit 2xl:max-w-screen-2xl 2xl:px-16 mx-auto place-self-center p-10">
