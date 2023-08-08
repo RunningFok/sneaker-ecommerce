@@ -10,6 +10,8 @@ export async function GET(request: NextRequest) {
   const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY!);
 
   const session = await getServerSession(authOptions);
+  console.log("session from order.ts")
+  console.log(session)
 
   const stripeOrders = await db
     .collection("users")

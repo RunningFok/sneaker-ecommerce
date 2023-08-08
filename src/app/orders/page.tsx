@@ -11,7 +11,7 @@ export default function Orders() {
 
   async function getData() {
     const response = await fetch("/api/orders", {
-      cache: "force-cache",
+      cache: "no-store",
     });
     return response.json();
   }
