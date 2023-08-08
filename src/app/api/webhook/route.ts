@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
     const session = event.data.object;
     return fulfillOrder(session).then(() => {
       return NextResponse.json({
-        msg: "Successfuly created new User: ",
+        msg: "Successfuly created stripe",
         status: 200,
       });
     });
@@ -83,7 +83,7 @@ export async function POST(req: NextRequest) {
     console.error(error);
 
     NextResponse.json({
-      error: "Error on '/api/register': " + error,
+      error: "Error on '/api/webhook': " + error,
       status: 400,
     });
   }
