@@ -5,6 +5,7 @@ import RecommendedBar from "./components/RecommendedBar";
 
 
 export default function Home() {
+  // Have to make it responsive
   return (
     <div className="bg-[#FEFEFE]">
       <CategoriesBar />
