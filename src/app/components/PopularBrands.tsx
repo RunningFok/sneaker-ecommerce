@@ -2,11 +2,11 @@ import BrandBox from "./BrandBox";
 
 export default function PopularBrands() {
   return (
-    <div className="px-5">
+    <div className="px-5 pt-5">
       <div className="flex text-green-950">
         <h1 className="sm:text-xl font-semibold">Popular Brands</h1>
       </div>
-      <div className="flex flex-row py-3 gap-0 sm:gap-5 place-content-evenly">
+      <div className="flex flex-row py-3 gap-0 sm:gap-5 place-content-start sm:place-content-evenly overflow-x-auto">
         <BrandBox
           brandName="Jordan"
           image="jordan-logo.png"

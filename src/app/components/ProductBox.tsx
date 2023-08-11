@@ -17,7 +17,7 @@ export default function ProductBox({
   return (
     <div
       key={styleID.toString()}
-      className="flex flex-col text-green-950 sm:w-52 border p-1 sm:p-3"
+      className="flex flex-col text-green-950 sm:min-w-[200px] border p-1 sm:p-3"
     >
       <Link href={`/${styleID}`}>
         {/* <Image
@@ -31,7 +31,7 @@ export default function ProductBox({
           alt={shoeName}
           width={500}
           height={600}
-          className="max-w-[100px] sm:max-w-[100%]"
+          className="max-w-[150px] sm:max-w-[100%]"
         />
       </Link>
       <h5 className="text-xs sm:text-sm font-medium line-clamp-2 pt-1">

@@ -28,12 +28,11 @@ export default function CheckoutProduct({
   const removeItemFromBasket = () => {
     const id = styleID;
     dispatch(removeFromBasket({ id }));
-    console.log("hello");
   };
 
   return (
     <div className="pt-5 px-5 flex flex-row">
-      <div className="px-5 mx-auto">
+      <div className="px-5 mx-auto items-center self-center">
         <Image src={thumbnail} alt={shoeName} width={400} height={400} />
       </div>
       <div className="w-2/5 pt-6">

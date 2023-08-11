@@ -51,7 +51,7 @@ export default function SearchPage() {
         </h5>
       </div>
 
-      <div className="grid sm:grid-cols-4 2xl:grid-cols-6 p-5 pt-1 gap-5">
+      <div className="grid grid-cols-2 sm:grid-cols-4 2xl:grid-cols-6 p-5 pt-1 gap-5">
         {sneakerList.map((sneaker) => (
           <ProductBox
             styleID={sneaker.styleID}
@@ -68,7 +68,7 @@ export default function SearchPage() {
     <div className="bg-[#FEFEFE]">
       <div className="sm:max-w-fit 2xl:max-w-screen-2xl 2xl:px-16 mx-auto items-center justify-items-center place-self-center">
         <div className="flex flex-row">
-          <nav className="flex flex-col sticky top-0 text-green-950 text-lg font-bold p-5 mr-10 gap-3 place-content-start">
+          <nav className="hidden sm:flex flex-col sticky top-0 text-green-950 text-lg font-bold p-5 mr-10 gap-3 place-content-start">
             <div>Sneakers</div>
             <div>Shoes</div>
             <div>Apparael</div>
