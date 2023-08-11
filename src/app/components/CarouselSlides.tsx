@@ -9,22 +9,22 @@ export default function CarouselSlides() {
   const responsive = [
     {
       image: "/static/images/nike-banner.webp",
-      size: "h-96 object-none",
+      size: "h-40 sm:h-96 sm:object-none",
       link: "/DD1391-401",
     },
     {
       image: "/static/images/crocs-banner.jpg",
-      size: "h-96 object-fill",
+      size: "h-40 sm:h-96 sm:object-fill",
       link: "/search?q=crocs",
     },
     {
       image: "/static/images/hoka-banner.webp",
-      size: "h-96 object-fill",
+      size: "h-40 sm:h-96 sm:object-fill",
       link: "/search?q=hoka",
     },
   ];
   return (
-    <div className=" items-center px-5 py-8">
+    <div className=" items-center px-5 py-3 sm:py-8">
       <Carousel
         autoPlay
         infiniteLoop

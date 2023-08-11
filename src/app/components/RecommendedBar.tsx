@@ -7,10 +7,10 @@ export default async function RecommendedBar() {
   return (
     <div className="px-5">
       <div className="flex text-green-950">
-        <h1 className="text-xl font-semibold">Recommended For You</h1>
-        <QuestionMarkCircleIcon className="h-12 p-3 -ml-2 -mt-3" />
+        <h1 className="sm:text-xl font-semibold">Recommended For You</h1>
+        <QuestionMarkCircleIcon className="h-10 sm:h-12 p-3 -ml-2 -mt-2 sm:-mt-3" />
       </div>
-      <div className="flex flex-row gap-5 pb-4 place-content-evenly">
+      <div className="flex flex-row gap-2 sm:gap-5 pb-4 place-content-start sm:place-content-evenly overflow-x-auto">
         {popularSneakers?.map((sneaker) => (
           <ProductBox
             styleID={sneaker.styleID}

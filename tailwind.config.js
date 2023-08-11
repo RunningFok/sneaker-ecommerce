@@ -15,6 +15,7 @@ module.exports = {
       transitionDuration: {
         5000: "5000ms",
       },
+    
     },
   },
   plugins: [],

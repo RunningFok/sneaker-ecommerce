@@ -16,7 +16,7 @@ export default function BrandBox({ image, brandName, linkURL }: BrandBox) {
           alt={brandName}
           width={200}
           height={200}
-          className="w-72 h-36"
+          className="w-96 sm:w-72 h-12 sm:h-36"
         />
       </Link>
     </div>

@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="bg-[#FEFEFE]">
       <CategoriesBar />
-      <div className="sm:max-w-fit 2xl:max-w-screen-2xl 2xl:px-16 mx-auto items-center justify-items-center place-self-center">
+      <div className="max-w-fit 2xl:max-w-screen-2xl 2xl:px-16 mx-auto pb-10 sm:pb-0 items-center justify-items-center place-self-center">
         <CarouselSlides />
         <RecommendedBar />
         <PopularBrands />
