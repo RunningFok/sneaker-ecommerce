@@ -36,10 +36,10 @@ export default function CheckoutProduct({
         <Image src={thumbnail} alt={shoeName} width={400} height={400} />
       </div>
       <div className="w-2/5 pt-6">
-        <h1 className="text-xl font-bold justify-items-start">{shoeName}</h1>
-        <h5 className="pt-3 text-sm">{colorway}</h5>
+        <h1 className="text-sm sm:text-xl font-bold justify-items-start">{shoeName}</h1>
+        <h5 className="pt-1 sm:pt-3 text-xs sm:text-sm">{colorway}</h5>
         {/* <h5 className="pt-3 text-sm line-clamp-2">{description}</h5> */}
-        <h5 className="pt-5 text-xl font-semibold">${retailPrice}</h5>
+        <h5 className="pt-3 sm:pt-5 text-xl font-semibold">${retailPrice}</h5>
         <button
           className="mt-5 p-2 text-sm sm:text-base bg-gradient-to-b from-rose-500 to-rose-400 border border-rose-400 rounded-lg focus:outline-none focus:ring-rose-700 active:from-rose-600 font-bold"
           onClick={() => removeItemFromBasket()}

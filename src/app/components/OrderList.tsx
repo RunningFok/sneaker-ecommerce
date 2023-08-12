@@ -14,13 +14,13 @@ export default function OrderList({
   images,
   amount,
 }: OrderListProps) {
-  return (
+  return ( 
     <div
       key={id.toString()}
       className="text-green-950 border relative rounded-md p-3"
     >
       <div className="items-start p-5 text-sm">
-        <h5 className="font-bold text-lg">ORDER PLACED</h5>
+        <h5 className="font-bold text-base sm:text-lg">ORDER PLACED</h5>
         <h5 className="text-sm font-bold"><span className="text-base pr-2">Total:</span>${amount}</h5>
         <h5 className="text-sm font-bold"><span className="text-base pr-2">Date:</span>{moment.unix(timestamp).format("DD MMMM YY")}</h5>
       </div>

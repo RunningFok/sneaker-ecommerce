@@ -57,7 +57,7 @@ export default function Checkout() {
         ) : (
           <div className="flex flex-col sm:flex-row">
             <div className="flex flex-col w-full px-5 pb-10 sm:pb-44 space-y-1">
-              <h1 className="flex items-center justify-center text-3xl font-bold font-serif border-b p-8">
+              <h1 className="flex items-center justify-center text-xl sm:text-3xl font-bold font-serif border-b p-4 sm:p-8">
                 Shopping Basket
               </h1>
               {items.map((item, i) => (

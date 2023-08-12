@@ -28,7 +28,7 @@ export default function Orders() {
 
 
   const loader = (
-    <div className="sm:max-w-fit 2xl:max-w-screen-2xl 2xl:px-16 mx-auto place-self-center p-10">
+    <div className="sm:max-w-fit 2xl:max-w-screen-2xl 2xl:px-16 mx-auto place-self-center sm:p-10">
       <div className="mx-auto items-center justify-items-center place-self-center">
         <div className="text-green-950">
           <div className="p-5">
@@ -43,17 +43,17 @@ export default function Orders() {
   );
 
   const sneakerListComponents = (
-    <div className="sm::max-w-screen-2xl 2xl:px-16 mx-auto place-self-center px-10 sm:p-10">
+    <div className="sm::max-w-screen-2xl 2xl:px-16 mx-auto place-self-center px-4 sm:p-8">
       <div className="mx-auto items-center justify-items-center place-self-center">
         {orderList.length === 0 ? (
           <div className="flex py-64 items-center justify-center">
-            <div className="text-3xl font-bold font-serif p-5">
+            <div className="text-xl sm:text-3xl font-bold font-serif p-5">
               Your list is empty
             </div>
           </div>
         ) : (
           <div className="flex flex-col pb-44 space-y-1">
-            <h1 className="flex items-center justify-center text-3xl font-bold font-serif border-b p-8 mb-10">
+            <h1 className="flex items-center justify-center text-xl sm:text-3xl font-bold font-serif border-b p-4 sm:p-8 mb-5 sm:mb-10">
               Order List
             </h1>
             {orderList?.map(({ id, amount, timestamp, images }) => (
@@ -83,7 +83,7 @@ export default function Orders() {
         )
       ) : (
         <div className="flex w-screen py-64 items-center justify-center">
-          <div className="text-3xl font-bold font-serif p-5">
+          <div className="text-xl sm:text-3xl font-bold font-serif p-5">
             Please sign in to see your order
           </div>
         </div>
