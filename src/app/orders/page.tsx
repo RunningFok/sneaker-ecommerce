@@ -28,13 +28,13 @@ export default function Orders() {
 
 
   const loader = (
-    <div className="sm:max-w-fit 2xl:max-w-screen-2xl 2xl:px-16 mx-auto place-self-center sm:p-10">
+    <div className="sm:max-w-fit 2xl:max-w-screen-2xl 2xl:px-16 pb-60 sm:pb-96 mx-auto place-self-center sm:p-10">
       <div className="mx-auto items-center justify-items-center place-self-center">
         <div className="text-green-950">
           <div className="p-5">
-            <h5 className="text-lg">Loading ordered list</h5>
+            <h5 className="text-lg">Loading ordered list...</h5>
           </div>
-          <div className="flex items-center justify-center justify-items-center place-content-center">
+          <div className="flex items-center justify-center justify-items-center lace-items-center pt-20">
             <Loading />
           </div>
         </div>

@@ -36,7 +36,7 @@ export default function SearchPage() {
       <div className="p-5">
         <h5 className="text-lg">Browsing results for "{searchQuery}"</h5>
       </div>
-      <div className="flex items-center justify-center justify-items-center place-content-center">
+      <div className="flex items-center justify-center justify-items-center place-items-center pt-20">
         <Loading />
       </div>
     </div>
@@ -67,7 +67,7 @@ export default function SearchPage() {
   return (
     <div className="bg-[#FEFEFE]">
       <div className="sm:max-w-fit 2xl:max-w-screen-2xl 2xl:px-16 mx-auto items-center justify-items-center place-self-center">
-        <div className="flex flex-row">
+        <div className="sm:flex sm:flex-row">
           <nav className="hidden sm:flex flex-col sticky top-0 text-green-950 text-lg font-bold p-5 mr-10 gap-3 place-content-start">
             <div>Sneakers</div>
             <div>Shoes</div>
@@ -76,7 +76,7 @@ export default function SearchPage() {
             <div>Watches</div>
             <div>Accessories</div>
           </nav>
-          <div className="">
+          <div className="pb-60">
             {isLoading === true ? loader : searchedSneaker}
           </div>
         </div>

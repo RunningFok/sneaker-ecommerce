@@ -14,7 +14,7 @@ export default function Success() {
           </div>
           <div className="flex flex-col p-5 pb-16 text-xs sm:text-sm place-content-center text-center items-center">
             <p>Thank you for shopping with us.</p>
-            <p >
+            <p>
               If you would like to check the status of order(s) please press the
               link below.
             </p>
