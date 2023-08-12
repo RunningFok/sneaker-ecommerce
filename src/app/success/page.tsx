@@ -6,15 +6,15 @@ export default function Success() {
   const router = useRouter();
   return (
     <div className="bg-[#FEFEFE] text-green-950">
-      <div className="mx-auto items-center justify-items-center place-self-center">
+      <div className="mx-auto items-center justify-items-center place-self-center pb-24">
         <div className="flex flex-col">
-          <div className="flex flex-col p-5 pt-20 place-content-center items-center">
-            <CheckCircleIcon className="text-green h-56" />
-            <h1 className="text-3xl font-bold">ORDER CONFIRMED</h1>
+          <div className="flex flex-col p-5 pt-20 place-content-center items-center ">
+            <CheckCircleIcon className="text-green h-24 sm:h-56" />
+            <h1 className="text-xl sm:text-3xl font-bold">ORDER CONFIRMED</h1>
           </div>
-          <div className="flex flex-col p-5 pb-16 place-content-center items-center">
-            <p className="text-sm">Thank you for shopping with us.</p>
-            <p className="text-sm">
+          <div className="flex flex-col p-5 pb-16 text-xs sm:text-sm place-content-center text-center items-center">
+            <p>Thank you for shopping with us.</p>
+            <p >
               If you would like to check the status of order(s) please press the
               link below.
             </p>

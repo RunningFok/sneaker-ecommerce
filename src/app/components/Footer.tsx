@@ -9,34 +9,34 @@ export default function Footer() {
         </div>
         <div className="hidden sm:flex flow-row mt-20">
           <div className="flex flex-col gap-3 mr-5">
-            <Link href={"/airjordan"}>Air Jordan</Link>
-            <Link href={"/airjordan1"}>Air Jordan 1</Link>
-            <Link href={"/airjordan11"}>Air Jordan 11</Link>
-            <Link href={"/airjordan4"}>Air Jordan 4</Link>
+            <Link href={"/search?q=airjordan"}>Air Jordan</Link>
+            <Link href={"/search?q=airjordan1"}>Air Jordan 1</Link>
+            <Link href={"/search?q=airjordan11"}>Air Jordan 11</Link>
+            <Link href={"/search?q=airjordan4"}>Air Jordan 4</Link>
           </div>
           <div className="flex flex-col gap-3 mx-5">
-            <Link href={"/newbalance"}>New Balance</Link>
-            <Link href={"/newbalance327"}>New Balance 327</Link>
-            <Link href={"/newbalance530"}>New Balance 530</Link>
-            <Link href={"/newbalance550"}>New Balance 550</Link>
+            <Link href={"/search?q=newbalance"}>New Balance</Link>
+            <Link href={"/search?q=newbalance327"}>New Balance 327</Link>
+            <Link href={"/search?q=newbalance530"}>New Balance 530</Link>
+            <Link href={"/search?q=newbalance550"}>New Balance 550</Link>
           </div>
           <div className="flex flex-col gap-3 mx-5">
-            <Link href={"/nike"}>Nike</Link>
-            <Link href={"/nikedunk"}>Nike Dunk</Link>
-            <Link href={"/nikeblazer"}>Nike Blazer</Link>
-            <Link href={"/nikeairforce1"}>Nike Air Force 1</Link>
+            <Link href={"/search?q=nike"}>Nike</Link>
+            <Link href={"/search?q=nikedunk"}>Nike Dunk</Link>
+            <Link href={"/search?q=nikeblazer"}>Nike Blazer</Link>
+            <Link href={"/search?q=nikeairforce1"}>Nike Air Force 1</Link>
           </div>
           <div className="flex flex-col gap-3 mx-5">
-            <Link href={"/crocs"}>Crocs</Link>
-            <Link href={"/crocsclog"}>Crocs Clog</Link>
-            <Link href={"/crocssandals"}>Crocs Sandals</Link>
-            <Link href={"/crocsslides"}>Crocs Slides</Link>
+            <Link href={"/search?q=crocs"}>Crocs</Link>
+            <Link href={"/search?q=crocsclog"}>Crocs Clog</Link>
+            <Link href={"/search?q=crocssandals"}>Crocs Sandals</Link>
+            <Link href={"/search?q=crocsslides"}>Crocs Slides</Link>
           </div>
           <div className="flex flex-col gap-3 mx-5">
-            <Link href={"/adidas"}>Adidas</Link>
-            <Link href={"/adidassuperstar"}>Adidas Superstar</Link>
-            <Link href={"/adidasultraboost"}>Adidas Ultraboost</Link>
-            <Link href={"/adidassamba"}>Adidas Samba</Link>
+            <Link href={"/search?q=adidas"}>Adidas</Link>
+            <Link href={"/search?q=adidassuperstar"}>Adidas Superstar</Link>
+            <Link href={"/search?q=adidasultraboost"}>Adidas Ultraboost</Link>
+            <Link href={"/search?q=adidassamba"}>Adidas Samba</Link>
           </div>
         </div>
         <hr className="my-8 sm:my-16" />

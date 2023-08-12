@@ -55,7 +55,7 @@ export default function Navbar() {
       >
         <p>
           {session ? (
-            <div className="bg-yellow-400 text-green-950 text-center rounded-full sm:pb-1 h-5 sm:h-6 w-5 sm:w-6 text-sm sm:text-lg font-semibold">
+            <div className="bg-yellow-400 text-green-950 text-center rounded-full sm:pb-1 h-5 sm:h-7 w-5 sm:w-7 text-sm sm:text-lg font-semibold">
               {session?.user?.name?.split(" ")[0][0]}
             </div>
           ) : (
