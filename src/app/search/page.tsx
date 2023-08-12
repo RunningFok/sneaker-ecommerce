@@ -34,7 +34,7 @@ export default function SearchPage() {
   const loader = (
     <div className="text-green-950">
       <div className="p-5">
-        <h5 className="text-lg">Browsing results for "{searchQuery}"</h5>
+        <h5 className="text-lg">Browsing results for "{searchQuery}"...</h5>
       </div>
       <div className="flex items-center justify-center justify-items-center place-items-center pt-20">
         <Loading />
@@ -46,7 +46,7 @@ export default function SearchPage() {
     <div className="text-green-950">
       <div className="p-5">
         <h5 className="text-lg">
-          Browse <span className="font-bold">{sneakerList.length}</span> results
+          Browsed <span className="font-bold">{sneakerList.length}</span> results
           for "{searchQuery}"
         </h5>
       </div>
