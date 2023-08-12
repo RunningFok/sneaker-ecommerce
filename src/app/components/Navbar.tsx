@@ -1,18 +1,58 @@
 "use client";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { BellIcon } from "@heroicons/react/24/outline";
-import { ShoppingCartIcon, UserCircleIcon } from "@heroicons/react/24/solid";
+import {
+  ShoppingCartIcon,
+  UserCircleIcon,
+  MagnifyingGlassIcon,
+  MagnifyingGlassCircleIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/solid";
 import Link from "next/link";
 import SearchBox from "./SearchBox";
 import { useRouter } from "next/navigation";
 import { useAppSelector } from "@/redux/hooks";
+import { useState } from "react";
 
 export default function Navbar() {
   const router = useRouter();
   const { data: session } = useSession();
   const items = useAppSelector((state) => state.basket.items);
 
-  return (
+  const [mobileSearch, setMobileSearch] = useState(false);
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
+  const onSearch = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const encodedSearchQuery = encodeURI(searchQuery);
+    router.push(`/search?q=${encodedSearchQuery}`);
+    console.log("current query:", searchQuery);
+  };
+
+  const mobileSearchBar = (
+    <nav className="sticky top-0 z-20 flex items-center flex-grow py-1 sm:py-5 bg-gradient-to-b from-emerald-800 to-emerald-700">
+      <form
+        className="flex flex-grow cursor-pointer items-center mx-2 h-10 rounded-md bg-yellow-400 hover:bg-yellow-500"
+        onSubmit={onSearch}
+      >
+        <button onClick={() => onSearch} className="-mx-2">
+          <MagnifyingGlassIcon className="h-12 p-4" />
+        </button>
+        <input
+          className="p-2 px-4 h-full w-6 flex-grow flex-shrink rounded-l-md text-sm focus:outline-none text-green-950"
+          type="text"
+          onChange={(event) => setSearchQuery(event.target.value)}
+          value={searchQuery}
+          placeholder="Search for brand, color, etc."
+        />
+        <button onClick={() => setMobileSearch(false)} className="-mx-2">
+          <XMarkIcon className="h-12 p-4" />
+        </button>
+      </form>
+    </nav>
+  );
+
+  const standardNavBar = (
     <nav className="sticky top-0 z-20 flex items-center flex-grow py-1 sm:py-5 px-5 bg-gradient-to-b from-emerald-800 to-emerald-700">
       <div className="mt-1 sm:mx-2 sm:ml-4 flex items-center flex-grow sm:flex-grow-0">
         <Link
@@ -34,10 +74,14 @@ export default function Navbar() {
       </div>
       <Link
         href={"/orders"}
-        className="text-base pt-1 sm:pt-0 text-stone-50 sm:text-lg mx-2"
+        className="hidden sm:flex text-base pt-1 sm:pt-0 text-stone-50 sm:text-lg mx-2"
       >
         Orders
       </Link>
+
+      <div className="flex sm:hidden" onClick={() => setMobileSearch(true)}>
+        <MagnifyingGlassCircleIcon className="h-10 sm:h-12 p-2 -mx-1 cursor-pointer" />
+      </div>
 
       <div
         onClick={() => router.push("/checkout")}
@@ -67,4 +111,6 @@ export default function Navbar() {
       </div>
     </nav>
   );
+
+  return mobileSearch ? mobileSearchBar : standardNavBar;
 }
