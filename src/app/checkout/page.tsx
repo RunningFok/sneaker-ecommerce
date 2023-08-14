@@ -16,7 +16,6 @@ export default function Checkout() {
   const createCheckoutSession = async () => {
     const stripe = await stripePromise;
 
-
     const response = await fetch("/api/checkout", {
       method: "POST",
       mode: "cors",
@@ -33,18 +32,30 @@ export default function Checkout() {
           email: session?.user?.email,
         } || {}
       ),
-    });
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (session) {
+        return stripe!.redirectToCheckout({ sessionId: session.id });
+      })
+      .then(function (result) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, you should display the localized error message to your
+        // customer using `error.message`.
+        if (result.error) {
+          alert(result.error.message);
+        }
 
-    const body = await response.json();
+        // const body = await response.json();
 
+        // const result = await stripe!.redirectToCheckout({
+        //   sessionId: body.id,
+        // });
 
-    const result = await stripe!.redirectToCheckout({
-      sessionId: body.id,
-    });
-
-    if (body.error) alert(body.error.message);
+        // if (body.error) alert(body.error.message);
+      });
   };
-
   return (
     <div className="bg-[#FEFEFE] text-green-950">
       <div className="mx-auto items-center justify-items-center place-self-center">

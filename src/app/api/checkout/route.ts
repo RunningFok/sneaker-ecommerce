@@ -48,7 +48,7 @@ export async function POST(request: NextRequest, response: NextResponse) {
     return NextResponse.json({ id: checkoutSession.id });
   } catch (error: any) {
     const errorMessage =
-      error instanceof Error ? error.message : "Internal server errorz";
+      error instanceof Error ? error.message : "Internal server error";
     return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }

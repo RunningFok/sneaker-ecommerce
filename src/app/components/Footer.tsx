@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="pt-12 sm:pt-28 pb-16 px-5 sm:px-10 bg-zinc-800 text-sm">
-        <div className="text-lg sm:text-3xl font-serif">
+        <div className="text-base sm:text-3xl font-serif">
           Kick A Good Kick Before You Get Kicked
         </div>
         <div className="hidden sm:flex flow-row mt-20">

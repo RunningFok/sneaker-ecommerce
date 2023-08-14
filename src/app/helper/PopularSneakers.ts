@@ -1,6 +1,5 @@
 const SneaksAPI = require("sneaks-api");
 
-
 export default async function PopularSneakers(): Promise<ISneaker[]> {
   const sneaks = new SneaksAPI();
 

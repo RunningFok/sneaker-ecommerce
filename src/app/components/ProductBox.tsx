@@ -16,7 +16,7 @@ export default function ProductBox({
 }: ProductBoxProps) {
   return (
     <div
-      key={styleID.toString()}
+      key={styleID}
       className="flex flex-col text-green-950 sm:min-w-[200px] border p-1 sm:p-3"
     >
       <Link href={`/${styleID}`}>
