@@ -80,17 +80,17 @@ export default function Navbar() {
       </Link>
 
       <div className="flex sm:hidden" onClick={() => setMobileSearch(true)}>
-        <MagnifyingGlassCircleIcon className="h-10 sm:h-12 p-2 -mx-1 cursor-pointer" />
+        <MagnifyingGlassCircleIcon className="h-11 sm:h-12 p-2 -mx-2 cursor-pointer" />
       </div>
 
       <div
         onClick={() => router.push("/checkout")}
         className="relative text-lg mx-2 cursor-pointer"
       >
-        <span className="absolute top-0 left-5 sm:left-6 right-5 sm:right-10 h-4 sm:h-5 w-4 sm:w-5 bg-yellow-400 text-center rounded-full text-green-950 font-bold text-xs sm:text-sm">
+        <span className="absolute top-0.5 left-5 sm:left-6 right-5 sm:right-10 h-4 sm:h-5 w-4 sm:w-5 bg-yellow-400 text-center rounded-full text-green-950 font-bold text-xs sm:text-sm">
           {items.length}
         </span>
-        <ShoppingCartIcon className="h-10 sm:h-12 p-2 -mx-1 cursor-pointer" />
+        <ShoppingCartIcon className="h-11 sm:h-12 p-2 -mx-2 cursor-pointer" />
       </div>
 
       <div
@@ -99,12 +99,12 @@ export default function Navbar() {
       >
         <p>
           {session ? (
-            <div className="bg-yellow-400 text-green-950 text-center rounded-full sm:pb-1 h-5 sm:h-7 w-5 sm:w-7 text-sm sm:text-lg font-semibold">
+            <div className="bg-yellow-400 text-green-950 text-center rounded-full -mx-2 sm:pb-1 h-6 sm:h-7 w-6 sm:w-7 text-base sm:text-lg font-semibold">
               {session?.user?.name?.split(" ")[0][0]}
             </div>
           ) : (
             <div className="text-stone-50 text:sm sm:text-lg">
-              <UserCircleIcon className="h-10 sm:h-12 p-2 -mx-1" />
+              <UserCircleIcon className="h-11 sm:h-12 p-2 -mx-2" />
             </div>
           )}
         </p>

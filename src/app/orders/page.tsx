@@ -43,7 +43,7 @@ export default function Orders() {
   );
 
   const sneakerListComponents = (
-    <div className="sm::max-w-screen-2xl 2xl:px-16 mx-auto place-self-center px-4 sm:p-8">
+    <div className="sm:max-w-screen-2xl 2xl:px-16 mx-auto place-self-center px-4 sm:p-8">
       <div className="mx-auto items-center justify-items-center place-self-center">
         {orderList.length === 0 ? (
           <div className="flex py-64 items-center justify-center">
