@@ -8,9 +8,10 @@ interface CheckoutProductProps {
   thumbnail: string;
   retailPrice: number;
   brand: string;
-  // description: string;
+  description: string;
   releaseDate: string;
   colorway: string;
+  isSize: string;
 }
 
 export default function CheckoutProduct({
@@ -19,9 +20,10 @@ export default function CheckoutProduct({
   thumbnail,
   retailPrice,
   brand,
-  // description,
+  description,
   releaseDate,
   colorway,
+  isSize,
 }: CheckoutProductProps) {
   const dispatch = useAppDispatch();
 
@@ -36,8 +38,11 @@ export default function CheckoutProduct({
         <Image src={thumbnail} alt={shoeName} width={400} height={400} />
       </div>
       <div className="w-2/5 pt-6">
-        <h1 className="text-sm sm:text-xl font-bold justify-items-start">{shoeName}</h1>
+        <h1 className="text-sm sm:text-xl font-bold justify-items-start">
+          {shoeName}
+        </h1>
         <h5 className="pt-1 sm:pt-3 text-xs sm:text-sm">{colorway}</h5>
+        <h5 className="pt-1 sm:pt-3 text-xs sm:text-sm">Size: {isSize}</h5>
         {/* <h5 className="pt-3 text-sm line-clamp-2">{description}</h5> */}
         <h5 className="pt-3 sm:pt-5 text-xl font-semibold">${retailPrice}</h5>
         <button

@@ -79,9 +79,10 @@ export default function Checkout() {
                   thumbnail={item.thumbnail}
                   retailPrice={item.retailPrice}
                   brand={item.brand}
-                  // description={item.description}
+                  description={item.description}
                   releaseDate={item.releaseDate}
                   colorway={item.colorway}
+                  isSize={item.isSize}
                 />
               ))}
             </div>
