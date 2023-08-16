@@ -22,7 +22,11 @@ export default function PopularBrands() {
           image="adidas-logo-2.png"
           linkURL="/search?q=adidas"
         />
-        <BrandBox brandName="Crocs" image="crocs-logo.png" linkURL="/crocs" />
+        <BrandBox
+          brandName="Crocs"
+          image="crocs-logo.png"
+          linkURL="/search?q=crocs"
+        />
         <BrandBox
           brandName="New Balance"
           image="newbalance-logo.png"

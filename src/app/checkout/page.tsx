@@ -58,58 +58,60 @@ export default function Checkout() {
   };
   return (
     <div className="bg-[#FEFEFE] text-green-950">
-      <div className="mx-auto items-center justify-items-center place-self-center">
-        {items.length === 0 ? (
-          <div className="flex w-screen py-64 items-center justify-center">
-            <div className="text-xl sm:text-3xl font-bold font-serif p-5">
-              Your basket is empty
-            </div>
-          </div>
-        ) : (
-          <div className="flex flex-col sm:flex-row">
-            <div className="flex flex-col w-full px-5 pb-10 sm:pb-44 space-y-1">
-              <h1 className="flex items-center justify-center text-xl sm:text-3xl font-bold font-serif border-b p-4 sm:p-8">
-                Shopping Basket
-              </h1>
-              {items.map((item, i) => (
-                <CheckoutProduct
-                  key={i}
-                  styleID={item.styleID}
-                  shoeName={item.shoeName}
-                  thumbnail={item.thumbnail}
-                  retailPrice={item.retailPrice}
-                  brand={item.brand}
-                  description={item.description}
-                  releaseDate={item.releaseDate}
-                  colorway={item.colorway}
-                  isSize={item.isSize}
-                />
-              ))}
-            </div>
-            <div className="sm:w-8/12 bg-[#F4F3F1] ">
-              <div className="flex flex-col justify-center items-center py-10 sm:pt-20 ">
-                <h5 className="place-self-center text-emerald-600 text-lg font-semibold">
-                  Subtotal ({items.length} items) ${total}
-                </h5>
-                {!session ? (
-                  <button
-                    className="mt-5 p-2 place-content-center text-sm sm:text-base bg-gradient-to-b from-emerald-500 to-emerald-300 border border-emerald-400 rounded-lg focus:outline-none focus:ring-emerald-700 active:from-emerald-600 font-bold"
-                    onClick={() => signIn()}
-                  >
-                    Sign In
-                  </button>
-                ) : (
-                  <button
-                    className="mt-5 p-2 place-content-center text-sm sm:text-base bg-gradient-to-b from-emerald-500 to-emerald-300 border border-emerald-400 rounded-lg focus:outline-none focus:ring-emerald-700 active:from-emerald-600 font-bold"
-                    onClick={() => createCheckoutSession()}
-                  >
-                    Proceed to Checkout
-                  </button>
-                )}
+      <div className="sm:max-w-fit 2xl:max-w-screen-2xl 2xl:px-16 mx-auto place-self-center">
+        <div className="mx-auto items-center justify-items-center place-self-center">
+          {items.length === 0 ? (
+            <div className="flex w-screen py-64 items-center justify-center">
+              <div className="text-xl sm:text-3xl font-bold font-serif p-5">
+                Your basket is empty
               </div>
             </div>
-          </div>
-        )}
+          ) : (
+            <div className="flex flex-col sm:flex-row">
+              <div className="flex flex-col w-full px-5 pb-10 sm:pb-44 space-y-1">
+                <h1 className="flex items-center justify-center text-xl sm:text-3xl font-bold font-serif border-b p-4 sm:p-8">
+                  Shopping Basket
+                </h1>
+                {items.map((item, i) => (
+                  <CheckoutProduct
+                    key={i}
+                    styleID={item.styleID}
+                    shoeName={item.shoeName}
+                    thumbnail={item.thumbnail}
+                    retailPrice={item.retailPrice}
+                    brand={item.brand}
+                    description={item.description}
+                    releaseDate={item.releaseDate}
+                    colorway={item.colorway}
+                    isSize={item.isSize}
+                  />
+                ))}
+              </div>
+              <div className="sm:w-8/12 bg-[#F4F3F1] ">
+                <div className="flex flex-col justify-center items-center py-10 sm:pt-20 ">
+                  <h5 className="place-self-center text-emerald-600 text-lg font-semibold">
+                    Subtotal ({items.length} items) ${total}
+                  </h5>
+                  {!session ? (
+                    <button
+                      className="mt-5 p-2 place-content-center text-sm sm:text-base bg-gradient-to-b from-emerald-500 to-emerald-300 border border-emerald-400 rounded-lg focus:outline-none focus:ring-emerald-700 active:from-emerald-600 font-bold"
+                      onClick={() => signIn()}
+                    >
+                      Sign In
+                    </button>
+                  ) : (
+                    <button
+                      className="mt-5 p-2 place-content-center text-sm sm:text-base bg-gradient-to-b from-emerald-500 to-emerald-300 border border-emerald-400 rounded-lg focus:outline-none focus:ring-emerald-700 active:from-emerald-600 font-bold"
+                      onClick={() => createCheckoutSession()}
+                    >
+                      Proceed to Checkout
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
