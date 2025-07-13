@@ -97,7 +97,7 @@ export default function Navbar() {
         onClick={() => (!session ? signIn() : signOut())}
         className="cursor-pointer text-lg mx-2"
       >
-        <p>
+        <div>
           {session ? (
             <div className="bg-yellow-400 text-green-950 text-center rounded-full sm:mx-2 sm:pb-1 h-6 sm:h-7 w-6 sm:w-7 text-base sm:text-lg font-semibold">
               {session?.user?.name?.split(" ")[0][0]}
@@ -107,7 +107,7 @@ export default function Navbar() {
               <UserCircleIcon className="h-11 sm:h-12 p-2 -mx-3 sm:mx-0" />
             </div>
           )}
-        </p>
+        </div>
       </div>
     </nav>
   );

@@ -11,8 +11,9 @@ export default async function RecommendedBar() {
         <QuestionMarkCircleIcon className="h-10 sm:h-12 p-3 -ml-2 -mt-2 sm:-mt-3" />
       </div>
       <div className="flex flex-row gap-2 sm:gap-5 pb-4 place-content-start overflow-x-auto">
-        {popularSneakers?.map((sneaker) => (
+        {popularSneakers?.map((sneaker, i) => (
           <ProductBox
+            key={i}
             styleID={sneaker.styleID}
             shoeName={sneaker.shoeName}
             thumbnail={sneaker.thumbnail}

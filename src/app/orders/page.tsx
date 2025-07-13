@@ -57,7 +57,7 @@ export default function Orders() {
               Order List
             </h1>
             {orderList?.map(({ id, amount, timestamp, images }) => (
-              <div className="py-2">
+              <div key={id} className="py-2">
                 <OrderList
                   key={id}
                   id={id}

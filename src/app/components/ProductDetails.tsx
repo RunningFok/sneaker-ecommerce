@@ -109,6 +109,7 @@ export default function ProductDetails({
             <div className="grid grid-cols-4">
               {sizeList.map((size, index) => (
                 <button
+                  key={index}
                   className={
                     isActive === index ? clickedButton : notClickedButton
                   }
