@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "install-legacy": "npm install --legacy-peer-deps",
-    "postinstall": "npx patch-package"
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
@@ -24,7 +23,7 @@
     "firebase-admin": "^11.10.1",
     "micro": "^10.0.1",
     "moment": "^2.29.4",
-    "next": "^14.0.0",
+    "next": "13.4.7",
     "next-auth": "^4.22.3",
     "postcss": "8.4.24",
     "raw-body": "^2.5.2",
@@ -36,7 +35,9 @@
     "sneaks-api": "^1.2.3",
     "stripe": "^12.14.0",
     "tailwindcss": "3.3.2",
-    "typescript": "5.1.6",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
     "patch-package": "^7.0.0"
   }
 }
