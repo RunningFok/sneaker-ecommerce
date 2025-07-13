@@ -23,7 +23,7 @@
     "firebase-admin": "^11.10.1",
     "micro": "^10.0.1",
     "moment": "^2.29.4",
-    "next": "^15.3.5",
+    "next": "^14.0.0",
     "next-auth": "^4.22.3",
     "postcss": "8.4.24",
     "raw-body": "^2.5.2",
