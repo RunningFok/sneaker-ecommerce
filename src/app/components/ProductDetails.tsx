@@ -80,9 +80,9 @@ export default function ProductDetails({
 
   return (
     <div>
-      <div className="flex flex-col sm:flex-row justify-center items-center justify-self-center content-center pt-5">
+      <div className="flex flex-col sm:flex-row justify-center items-center justify-self-center content-center pt-5 px-5">
         <div className="flex sm:hidden">
-          <h1 className="flex text-xl sm:text-3xl font-bold items-start">
+          <h1 className="flex text-xl sm:text-3xl font-bold items-start px-5">
             {shoeName}
           </h1>
         </div>
@@ -99,13 +99,13 @@ export default function ProductDetails({
           <h1 className="hidden sm:flex text-3xl font-bold mt-10 items-start">
             {shoeName}
           </h1>
-          <h2 className="text-center font-semibold text-sm sm:text-base mt-5">
+          <h2 className="text-center font-semibold text-sm sm:text-base mt-5 px-5 sm:px-0">
             {colorway}
           </h2>
-          <h2 className="text-center font-semibold text-2xl mt-5">
+          <h2 className="text-center font-semibold text-2xl mt-5 px-5 sm:px-0">
             ${retailPrice}
           </h2>
-          <div className="text-center text-green-950 text-xs sm:text-sm mt-5">
+          <div className="text-center text-green-950 text-xs sm:text-sm mt-5 px-5 sm:px-0">
             <div className="grid grid-cols-4">
               {sizeList.map((size, index) => (
                 <button
@@ -121,7 +121,7 @@ export default function ProductDetails({
             </div>
           </div>
           <button
-            className="mt-5 sm:mt-5 p-2 text-base sm:text-lg bg-gradient-to-b from-emerald-500 to-emerald-300 border border-emerald-400 rounded-sm focus:outline-none focus:ring-emerald-700 active:from-emerald-600 font-bold"
+            className="mt-5 sm:mt-5 p-2 mx-5 sm:mx-0 text-base sm:text-lg bg-gradient-to-b from-emerald-500 to-emerald-300 border border-emerald-400 rounded-sm focus:outline-none focus:ring-emerald-700 active:from-emerald-600 font-bold"
             onClick={() => addItemToBasket()}
           >
             Add to basket

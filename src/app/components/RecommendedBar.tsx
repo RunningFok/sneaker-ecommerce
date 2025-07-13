@@ -5,7 +5,7 @@ import ProductBox from "./ProductBox";
 export default async function RecommendedBar() {
   const popularSneakers = await PopularSneakers();
   return (
-    <div className="px-5 pt-5">
+    <div className="px-5 pt-5 w-full">
       <div className="flex text-green-950">
         <h1 className="sm:text-xl font-semibold">Recommended For You</h1>
         <QuestionMarkCircleIcon className="h-10 sm:h-12 p-3 -ml-2 -mt-2 sm:-mt-3" />

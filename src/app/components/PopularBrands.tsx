@@ -2,7 +2,7 @@ import BrandBox from "./BrandBox";
 
 export default function PopularBrands() {
   return (
-    <div className="px-5 pt-5">
+    <div className="px-5 pt-5 w-full">
       <div className="flex text-green-950">
         <h1 className="sm:text-xl font-semibold">Popular Brands</h1>
       </div>

@@ -24,7 +24,7 @@ export default function CarouselSlides() {
     },
   ];
   return (
-    <div className=" items-center px-5 py-3 sm:py-8">
+    <div className=" items-center px-5 py-3 sm:py-8 w-full">
       <Carousel
         autoPlay
         infiniteLoop

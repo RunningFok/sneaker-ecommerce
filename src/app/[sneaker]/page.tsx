@@ -15,7 +15,7 @@ export default async function SneakerPage({ params }: SneakerPageProps) {
 
   return (
     <div className="bg-[#FEFEFE] text-green-950">
-      <div className="max-w-fit 2xl:max-w-screen-2xl 2xl:px-16 mx-auto place-self-center p-10 2xl:py-36 overflow-x-hidden">
+      <div className="max-w-fit 2xl:max-w-screen-2xl 2xl:px-16 mx-auto place-self-center p-10 2xl:py-36 overflow-x-hidden w-full">
           <ProductDetails
             key={sneakerData.styleID}
             styleID={sneakerData.styleID}
